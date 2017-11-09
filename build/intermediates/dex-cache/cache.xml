@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="7ff0c8aa4e80d2a03b52573d30913fbe7bdbde75">
+        sha1="5a1e2ab2ca60b802f60c7e5b45b3878f7d47bc5b">
         <dex dex="D:\MyApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7f1486bfaa8347ba56a31cf1ce9dbe7ba493c42d\classes.dex" />
     </item>
     <item

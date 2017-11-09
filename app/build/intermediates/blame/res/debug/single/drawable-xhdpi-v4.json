@@ -4,12 +4,12 @@
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png",
@@ -36,12 +36,12 @@
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
 		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:3:11-41
 		INJECTED from D:\MyApplication\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:2:1-21:12
 		INJECTED from D:\MyApplication\app\src\main\AndroidManifest.xml
 		INJECTED from D:\MyApplication\app\src\main\AndroidManifest.xml
 application
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:5:5-19:19
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:5:5-21:19
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Android\.android\build-cache\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Android\.android\build-cache\cecc88b616693725dbd7fa1e9e05fec7ee75b5a4\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Android\.android\build-cache\6b67dc77ff1437cfc80c9a6546a01ebfa38de374\output\AndroidManifest.xml:29:5-20
@@ -51,6 +51,10 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:16:17-76
 	android:name
 		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.guap.guap_tinder.Two_activity
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:19:9-20:20
+	android:name
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:19:19-47
 uses-sdk
 INJECTED from D:\MyApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Android\.android\build-cache\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\output\AndroidManifest.xml:21:5-23:78

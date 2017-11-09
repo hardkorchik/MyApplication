@@ -1,4 +1,4 @@
-#Fri Nov 10 01:48:40 MSK 2017
+#Fri Nov 10 02:02:46 MSK 2017
 base.0=D\:\\MyApplication\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_68994dc71f3db8cf0686299f241e2114c8957c07
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -56,6 +56,10 @@
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_maps.xml",
+        "source": "D:\\MyApplication\\app\\src\\main\\res\\layout\\activity_maps.xml"
+    },
+    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
@@ -94,6 +98,10 @@
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_registr.xml",
+        "source": "D:\\MyApplication\\app\\src\\main\\res\\layout\\activity_registr.xml"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",

@@ -8,12 +8,12 @@
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "C:\\Android\\.android\\build-cache\\331ae88da58f4205c62de760b674ec28d44cf9ab\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
-    },
-    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Android\\.android\\build-cache\\331ae88da58f4205c62de760b674ec28d44cf9ab\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
@@ -32,12 +32,12 @@
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
-        "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_ratingbar_material.xml"
-    },
-    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
@@ -46,6 +46,10 @@
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a37d6615f36a6f46a54ffb816d511ac37a7eff4e\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
@@ -70,6 +74,10 @@
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_normal.xml",
         "source": "C:\\Android\\.android\\build-cache\\331ae88da58f4205c62de760b674ec28d44cf9ab\\output\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a37d6615f36a6f46a54ffb816d511ac37a7eff4e\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
@@ -176,6 +184,10 @@
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a37d6615f36a6f46a54ffb816d511ac37a7eff4e\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
@@ -200,11 +212,19 @@
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a37d6615f36a6f46a54ffb816d511ac37a7eff4e\\output\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_normal.xml",
         "source": "C:\\Android\\.android\\build-cache\\331ae88da58f4205c62de760b674ec28d44cf9ab\\output\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a37d6615f36a6f46a54ffb816d511ac37a7eff4e\\output\\res\\drawable\\design_snackbar_background.xml"
     }
 ]

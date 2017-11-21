@@ -2,6 +2,15 @@
 <items version="2" >
 
     <item
+        is-multidex="true"
+        jar="C:\Android\.android\build-cache\5be47d74f95c1b63efce6f043bb34c89238057bf\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="D:\MyApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_64fda05c7e55581c63e0ea80bfd4f912ccf78415\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Android\.android\build-cache\3a8e89ed0467004351d0eb18802184fd66c7c01a\output\jars\classes.jar"
         jumboMode="false"
@@ -18,6 +27,15 @@
         revision="26.0.2"
         sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
         <dex dex="D:\MyApplication\app\build\intermediates\pre-dexed\debug\classes_5f7e6f503c4e5a5d4fdf3268894cebddc85c904e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\.android\build-cache\0f5da5f3a113eee3cdb19da5dc9e541154bc9c38\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="D:\MyApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_01ffa55716ada75615350d499d616e9712f7acd1\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -43,8 +61,17 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="677bc37706613fd474f3d93f65bdda0421c243d3">
+        sha1="950c8b9a09641c699d184f5e71113f0a614f06f0">
         <dex dex="D:\MyApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7f1486bfaa8347ba56a31cf1ce9dbe7ba493c42d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\.android\build-cache\a37d6615f36a6f46a54ffb816d511ac37a7eff4e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="D:\MyApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f62258db0db5ad260263a83d5ed2f79801e8aff2\classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -49,6 +49,8 @@
             android:name="com.guap.guap_tinder.MapsActivity"
             android:label="@string/title_activity_maps" >
         </activity>
+        <activity android:name="com.guap.guap_tinder.Massage" >
+        </activity>
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

@@ -1,14 +1,12 @@
 package com.guap.guap_tinder;
-
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.location.LocationListener;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -17,33 +15,54 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.net.Socket;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
-    private String message;
+    private String registration;
     private LocationManager locationManager;
     private double x;
     private double y;
+    private Socket s = null;
     private Marker marker;
+    private String massage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         Intent intent = getIntent();
-        if(intent.hasExtra("message")) {
-            message = intent.getStringExtra("message");
+        if(intent.hasExtra("registration")) {
+            registration = intent.getStringExtra("registration");
+        }
+        if(intent.hasExtra("massage")){
+            massage=intent.getStringExtra("massage");
         }
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         ActivityCompat.requestPermissions(this,new String[]{"android.permission.ACCESS_FINE_LOCATION"}, 1);
         locationManager=(LocationManager)getSystemService(LOCATION_SERVICE);
+        /*try {
+            s = new Socket("127.0.0.1 ",4001);
+            Thread threadIn = new Thread(new SocketInputThread(s));// создание отдельного потока на считывание даных от сервера
+            Thread threadOut = new Thread(new SocketOutputThread(s));// создание отдельного потока на ввод даных из клавиатуры
+            threadIn.start();           НЕ ВСЕ ФУНКЦИИ НУЖНЫ в отправке и приёме,буду фиксить
+            threadOut.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+    }
+    public void send_massege(View view){
+        Intent intent = new Intent(this,Massage.class );
+        startActivity(intent);
     }
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         float zoom=20;
         LatLng sydney = new LatLng(x, y);
-        marker=mMap.addMarker(new MarkerOptions().position(sydney).title(message));
+        marker=mMap.addMarker(new MarkerOptions().position(sydney).title(massage));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,zoom));
     }
     @Override
@@ -85,7 +104,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     };
     private void checkEnabled(){
-        locationManager.isProviderEnabled(locationManager.GPS_PROVIDER);
-        locationManager.isProviderEnabled(locationManager.NETWORK_PROVIDER);
+        locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
 }

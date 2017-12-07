@@ -23,7 +23,7 @@ public class Registr extends AppCompatActivity implements View.OnClickListener {
                     editText= (EditText)findViewById(R.id.editText);
                     editText2= (EditText)findViewById(R.id.editText2);
                     Intent intent = new Intent(this, MapsActivity.class);
-                    intent.putExtra("message",editText2.getText().toString()+"/"+editText.getText().toString());
+                    intent.putExtra("registration",editText2.getText().toString()+"/"+editText.getText().toString());
                     startActivity(intent);
                     break;
                 default:

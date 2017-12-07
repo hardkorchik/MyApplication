@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:3:11-41
 		INJECTED from D:\MyApplication\app\src\main\AndroidManifest.xml
@@ -26,11 +26,11 @@ ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:8:5-71
 	android:name
 		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:8:22-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:9:5-78
 	android:name
 		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:9:22-76
 application
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:10:5-33:19
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:11:5-36:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Android\.android\build-cache\b451ad583e7908d07b50db2417ffae8c0e1ab84d\output\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Android\.android\build-cache\3a8e89ed0467004351d0eb18802184fd66c7c01a\output\AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Android\.android\build-cache\331ae88da58f4205c62de760b674ec28d44cf9ab\output\AndroidManifest.xml:18:5-20:19
@@ -48,43 +48,47 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Android\.andr
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Android\.android\build-cache\0d7a3f423d87fc2467879892f6fd8da8a2ccf546\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Android\.android\build-cache\6e1696e8424ea4bf09a4a634105f1e644e712364\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:13:13-45
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:14:13-45
 	android:supportsRtl
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:15:13-39
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:16:13-39
 	android:roundIcon
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:14:13-58
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:15:13-58
 	android:allowBackup
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:11:13-39
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:12:13-39
 	android:icon
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:12:13-47
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:13:13-47
 	android:theme
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:16:13-44
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:17:13-44
 activity#com.guap.guap_tinder.Registr
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:17:19-42
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:18:19-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:19:17-68
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:20:17-68
 	android:name
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:21:17-76
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:22:17-76
 	android:name
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:22:27-74
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:25:9-27:58
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:26:9-28:58
 	android:value
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:27:17-56
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:28:17-56
 	android:name
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:26:17-62
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:27:17-62
 activity#com.guap.guap_tinder.MapsActivity
-ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:29:9-32:20
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:30:9-33:20
 	android:label
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:31:17-60
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:32:17-60
 	android:name
-		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:30:17-45
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:31:17-45
+activity#com.guap.guap_tinder.Massage
+ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:34:9-35:20
+	android:name
+		ADDED from D:\MyApplication\app\src\main\AndroidManifest.xml:34:19-42
 uses-sdk
 INJECTED from D:\MyApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Android\.android\build-cache\b451ad583e7908d07b50db2417ffae8c0e1ab84d\output\AndroidManifest.xml:5:5-7:41

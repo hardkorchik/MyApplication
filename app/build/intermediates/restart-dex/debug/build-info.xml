@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="26"
+    abi="x86"
+    api-level="25"
     build-mode="FULL"
     density="420dpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1512651336058"
+    timestamp="1512755014681"
     token="-5402124795597510456"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1512651336058"
+        timestamp="1512755014681"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\MyApplication\app\build\intermediates\split-apk\debug\slices\slice_2.apk"

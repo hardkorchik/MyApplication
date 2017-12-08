@@ -7,6 +7,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -16,18 +18,20 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Map;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements  OnMapReadyCallback{
     private GoogleMap mMap;
     private String registration;
     private LocationManager locationManager;
+    private PrintWriter out;
     private double x;
     private double y;
-    private Socket s = null;
     private Marker marker;
-    private String massage;
-    @Override
+    private ArrayList<Marker> list_marker;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
@@ -35,35 +39,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if(intent.hasExtra("registration")) {
             registration = intent.getStringExtra("registration");
         }
-        if(intent.hasExtra("massage")){
-            massage=intent.getStringExtra("massage");
-        }
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         ActivityCompat.requestPermissions(this,new String[]{"android.permission.ACCESS_FINE_LOCATION"}, 1);
         locationManager=(LocationManager)getSystemService(LOCATION_SERVICE);
-        /*try {
-            s = new Socket("127.0.0.1 ",4001);
-            Thread threadIn = new Thread(new SocketInputThread(s));// создание отдельного потока на считывание даных от сервера
-            Thread threadOut = new Thread(new SocketOutputThread(s));// создание отдельного потока на ввод даных из клавиатуры
-            threadIn.start();           НЕ ВСЕ ФУНКЦИИ НУЖНЫ в отправке и приёме,буду фиксить
-            threadOut.start();
+        list_marker.clear();
+        onMapReady(mMap);
+        if(GLOBAL.massage!=null){
+            ///ВЫВОДИМ СООБЩЕНИЕ НАД МЕТКОЙ
+        }
+    }
+    public void send_massage(View view){
+        try {
+            out = new PrintWriter(GLOBAL.socket.getOutputStream());
+            String outMessage;
+            TextView massage = (TextView) findViewById(R.id.massage);         //ОТПРАВЛЯЮ СООБЩЕНИЕ
+            outMessage='1'+registration+'/'+massage;
+            out.println(outMessage);
+            out.flush();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
-    }
-    public void send_massege(View view){
-        Intent intent = new Intent(this,Massage.class );
-        startActivity(intent);
+        }
     }
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         float zoom=20;
-        LatLng sydney = new LatLng(x, y);
-        marker=mMap.addMarker(new MarkerOptions().position(sydney).title(massage));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,zoom));
+        for (Map.Entry entry : GLOBAL.mark.entrySet()) {
+            //LatLng sydney = new LatLng(x, y);
+            list_marker.add(mMap.addMarker(new MarkerOptions().position((LatLng)entry.getValue()).title((String)entry.getKey())));
+        }
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(list_marker.get(0).getPosition(), zoom));
     }
     @Override
     protected void onResume(){
@@ -84,11 +91,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             y=location.getLongitude();
             marker.remove();
             onMapReady(mMap);
+            try {
+                out = new PrintWriter(GLOBAL.socket.getOutputStream());
+                String outMessage;                                          //ОТПРАВЛЯЮ КООРДИНАТЫ
+                outMessage='2'+registration+'/'+ x+'/'+y+'/';
+                out.println(outMessage);
+                out.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
         public void onStatusChanged(String s, int i, Bundle bundle) {
-           //записываем лог(типоХD)изменился провайдер
         }
 
         @Override

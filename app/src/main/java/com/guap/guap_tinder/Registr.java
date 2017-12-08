@@ -5,29 +5,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.io.IOException;
+import java.net.Socket;
+
 public class Registr extends AppCompatActivity implements View.OnClickListener {
-    Button ActTwo;
-    EditText editText;
-    EditText editText2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registr);
-        ActTwo=(Button)findViewById(R.id.button);
-        ActTwo.setOnClickListener( this);
+        Button actTwo = (Button) findViewById(R.id.button);
+        actTwo.setOnClickListener( this);
     }
     @Override
     public void onClick(View v){
-            switch ((v.getId())) {
-                case R.id.button:
-                    editText= (EditText)findViewById(R.id.editText);
-                    editText2= (EditText)findViewById(R.id.editText2);
-                    Intent intent = new Intent(this, MapsActivity.class);
-                    intent.putExtra("registration",editText2.getText().toString()+"/"+editText.getText().toString());
-                    startActivity(intent);
-                    break;
-                default:
-                    break;
-            }
+        try {
+            GLOBAL.socket = new Socket("5.19.136.111", 4897);
+            Thread threadIn = new Thread(new SocketInputThread());// создание отдельного потока на считывание даных от сервера
+            threadIn.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        EditText username = (EditText) findViewById(R.id.username);
+        Intent intent = new Intent(this, MapsActivity.class);
+        intent.putExtra("registration", username.getText().toString());
+        startActivity(intent);
     }
 }

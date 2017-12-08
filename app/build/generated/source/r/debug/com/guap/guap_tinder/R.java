@@ -3487,7 +3487,7 @@ containing a value of this type.
         public static final int design_navigation_view=0x7f0d0090;
         public static final int disableHome=0x7f0d001c;
         public static final int editText=0x7f0d0087;
-        public static final int editText2=0x7f0d0088;
+        public static final int username =0x7f0d0088;
         public static final int edit_query=0x7f0d0078;
         public static final int end=0x7f0d0033;
         public static final int end_padder=0x7f0d00ab;

@@ -8,13 +8,16 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
+    <TextView
+            android:text="TextView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:id="@+id/massage"
+            android:layout_width="290dp" android:layout_height="45dp"/>
     <Button
-            android:id="@+id/button"
+            android:text="Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Massage"
-            android:layout_alignParentTop="true" android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:background="?attr/actionModeBackground" android:onClick="send_massege"/>
+            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/massage" android:layout_toEndOf="@+id/massage" android:id="@+id/button2"
+            android:onClick="send_massage"/>
+
 </RelativeLayout>

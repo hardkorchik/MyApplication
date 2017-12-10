@@ -17,8 +17,8 @@ public class Registr extends AppCompatActivity implements View.OnClickListener {
         Thread thread = new Thread(new GLOBAL());// создание отдельного потока на считывание даных от сервера
         thread.start();
         setContentView(R.layout.activity_registr);
-        Button actTwo = (Button) findViewById(R.id.button);
-        actTwo.setOnClickListener( this);
+        //Button actTwo = (Button) findViewById(R.id.button);
+        //actTwo.setOnClickListener( this);
     }
     @Override
     public void onClick(View v){

@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
 
 <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-    <TextView
-            android:text="TextView"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:id="@+id/massage"
-            android:layout_width="290dp" android:layout_height="45dp"/>
+    <EditText
+            android:layout_width="256dp"
+            android:layout_height="82dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/massage" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.247"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:fontFamily="serif" android:textAlignment="center"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintHorizontal_bias="0.504" android:hint="massage" android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/button2" android:textSize="24sp" android:layout_toLeftOf="@+id/button2"
+            android:layout_toStartOf="@+id/button2"/>
     <Button
             android:text="Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/massage" android:layout_toEndOf="@+id/massage" android:id="@+id/button2"
-            android:onClick="send_massage"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:onClick="send_massage" android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>

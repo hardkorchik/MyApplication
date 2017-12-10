@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\activity_registr.xml",
+        "source": "D:\\MyApplication\\app\\src\\main\\res\\layout-v21\\activity_registr.xml"
+    },
+    {
         "merged": "D:\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
         "source": "C:\\Android\\.android\\build-cache\\f0235b16e36bac9f7fc38ac1f3b7289ef5d9782f\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },

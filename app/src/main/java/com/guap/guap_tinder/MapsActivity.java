@@ -8,20 +8,15 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Map;
 public class MapsActivity extends FragmentActivity implements  OnMapReadyCallback{
     private GoogleMap mMap;
     private String registration;
@@ -31,6 +26,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
     private double y;
     private Marker marker;
     private ArrayList<Marker> list_marker;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
@@ -43,7 +39,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
         mapFragment.getMapAsync(this);
         ActivityCompat.requestPermissions(this,new String[]{"android.permission.ACCESS_FINE_LOCATION"}, 1);
         locationManager=(LocationManager)getSystemService(LOCATION_SERVICE);
-        list_marker.clear();
+        //list_marker.clear();
         onMapReady(mMap);
         if(GLOBAL.massage!=null){
             ///ВЫВОДИМ СООБЩЕНИЕ НАД МЕТКОЙ
@@ -53,7 +49,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
         try {
             out = new PrintWriter(GLOBAL.socket.getOutputStream());
             String outMessage;
-            TextView massage = (TextView) findViewById(R.id.massage);         //ОТПРАВЛЯЮ СООБЩЕНИЕ
+            EditText massage = (EditText) findViewById(R.id.massage);         //ОТПРАВЛЯЮ СООБЩЕНИЕ
             outMessage='1'+registration+'/'+massage;
             out.println(outMessage);
             out.flush();
@@ -65,11 +61,11 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         float zoom=20;
-        for (Map.Entry entry : GLOBAL.mark.entrySet()) {
-            //LatLng sydney = new LatLng(x, y);
-            list_marker.add(mMap.addMarker(new MarkerOptions().position((LatLng)entry.getValue()).title((String)entry.getKey())));
+        for(int index=0;index<GLOBAL.name.size();index++){
+            list_marker.add(mMap.addMarker(new MarkerOptions().position((LatLng)
+                    GLOBAL.mark.get(index)).title((String)GLOBAL.name.get(index))));
         }
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(list_marker.get(0).getPosition(), zoom));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(list_marker.get(0).getPosition(), zoom));
     }
     @Override
     protected void onResume(){
@@ -90,15 +86,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
             y=location.getLongitude();
             marker.remove();
             onMapReady(mMap);
-            try {
-                out = new PrintWriter(GLOBAL.socket.getOutputStream());
-                String outMessage;                                          //ОТПРАВЛЯЮ КООРДИНАТЫ
-                outMessage='2'+registration+'/'+ x+'/'+y+'/';
-                out.println(outMessage);
-                out.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            input();
         }
 
         @Override
@@ -110,6 +98,9 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
             checkEnabled();
             x=(int)locationManager.getLastKnownLocation(s).getLatitude();
             y=(int)locationManager.getLastKnownLocation(s).getLongitude();
+            marker.remove();
+            onMapReady(mMap);
+            input();
         }
 
         @Override
@@ -117,6 +108,19 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
             checkEnabled();
         }
     };
+
+    private void input() {
+        try {
+            out = new PrintWriter(GLOBAL.socket.getOutputStream());
+            String outMessage;                                          //ОТПРАВЛЯЮ КООРДИНАТЫ
+            outMessage='2'+registration+'/'+ x+'/'+y+'/';
+            out.println(outMessage);
+            out.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void checkEnabled(){
         locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);

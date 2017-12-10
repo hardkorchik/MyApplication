@@ -22,7 +22,6 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Map;
-
 public class MapsActivity extends FragmentActivity implements  OnMapReadyCallback{
     private GoogleMap mMap;
     private String registration;

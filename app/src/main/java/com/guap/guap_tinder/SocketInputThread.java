@@ -11,9 +11,7 @@ public class SocketInputThread implements Runnable {
     private Scanner in = null;
     private String inMessage = null;
     private HashMap<String,Integer> key_map=new HashMap<>();
-    public SocketInputThread() {
-
-    }
+    public SocketInputThread() { }
     @Override
     public void run() {
         try {

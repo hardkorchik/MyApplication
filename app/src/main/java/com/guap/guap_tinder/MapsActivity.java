@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -40,7 +41,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
         ActivityCompat.requestPermissions(this,new String[]{"android.permission.ACCESS_FINE_LOCATION"}, 1);
         locationManager=(LocationManager)getSystemService(LOCATION_SERVICE);
         //list_marker.clear();
-        onMapReady(mMap);
+        //onMapReady(mMap);
         if(GLOBAL.massage!=null){
             ///ВЫВОДИМ СООБЩЕНИЕ НАД МЕТКОЙ
         }
@@ -49,7 +50,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
         try {
             out = new PrintWriter(GLOBAL.socket.getOutputStream());
             String outMessage;
-            EditText massage = (EditText) findViewById(R.id.massage);         //ОТПРАВЛЯЮ СООБЩЕНИЕ
+            EditText massage = findViewById(R.id.massage);         //ОТПРАВЛЯЮ СООБЩЕНИЕ
             outMessage='1'+registration+'/'+massage;
             out.println(outMessage);
             out.flush();
@@ -62,10 +63,12 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
         mMap = googleMap;
         float zoom=20;
         for(int index=0;index<GLOBAL.name.size();index++){
-            list_marker.add(mMap.addMarker(new MarkerOptions().position((LatLng)
-                    GLOBAL.mark.get(index)).title((String)GLOBAL.name.get(index))));
+            list_marker.add(mMap.addMarker(new MarkerOptions().position(
+                    GLOBAL.mark.get(index)).title(GLOBAL.name.get(index))));
         }
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(list_marker.get(0).getPosition(), zoom));
+        LatLng xy=new LatLng(x,y);
+        marker=mMap.addMarker(new MarkerOptions().position(xy).title(registration));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(xy,zoom));
     }
     @Override
     protected void onResume(){
@@ -98,8 +101,6 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
             checkEnabled();
             x=(int)locationManager.getLastKnownLocation(s).getLatitude();
             y=(int)locationManager.getLastKnownLocation(s).getLongitude();
-            marker.remove();
-            onMapReady(mMap);
             input();
         }
 

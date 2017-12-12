@@ -43,6 +43,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
         //list_marker.clear();
         //onMapReady(mMap);
         if(GLOBAL.massage!=null){
+            registration=GLOBAL.massage;
             ///ВЫВОДИМ СООБЩЕНИЕ НАД МЕТКОЙ
         }
     }
@@ -53,7 +54,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
             EditText massage = findViewById(R.id.massage);         //ОТПРАВЛЯЮ СООБЩЕНИЕ
             outMessage='1'+registration+'/'+massage;
             out.println(outMessage);
-            out.flush();
+            //out.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,8 +74,8 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
     @Override
     protected void onResume(){
         super.onResume();
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000*30,10,locationListener);
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,1000*30,10,locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,100*30,10,locationListener);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,100*30,10,locationListener);
         checkEnabled();
     }
     @Override
@@ -116,7 +117,7 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
             String outMessage;                                          //ОТПРАВЛЯЮ КООРДИНАТЫ
             outMessage='2'+registration+'/'+ x+'/'+y+'/';
             out.println(outMessage);
-            out.flush();
+           // out.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }

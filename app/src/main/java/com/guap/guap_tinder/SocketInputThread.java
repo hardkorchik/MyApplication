@@ -64,8 +64,17 @@ public class SocketInputThread implements Runnable {
                                 number.append(c);
                             }
                             second = Double.parseDouble(number.toString());
-                            GLOBAL.name.add(name.toString());
-                            GLOBAL.mark.add(new LatLng(first, second));
+                            boolean flag=false;
+                            for(int index=0;index<GLOBAL.name.size();index++){
+                                if(GLOBAL.name.get(index).equals(name.toString())) {
+                                    GLOBAL.mark.add(index,new LatLng(first, second));
+                                    flag = true;
+                                }
+                            }
+                            if(!flag){
+                                GLOBAL.name.add(name.toString());
+                                GLOBAL.mark.add(new LatLng(first, second));
+                            }
                             name.delete(0, name.length());
                             number.delete(0, number.length());
                         }
